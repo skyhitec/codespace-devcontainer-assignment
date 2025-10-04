@@ -1,10 +1,11 @@
 {
   "name": "ga2-5b56a4",
-  "image": "ghcr.io/devcontainers/features/python:1",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {}
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11" 
+    }
   },
-  "postCreateCommand": "pip install fastapi",
+  "postCreateCommand": "python -m ensurepip --upgrade && pip install --upgrade pip && pip install fastapi",
   "extensions": [
     "astral-sh.uv",
     "ms-python.python"
